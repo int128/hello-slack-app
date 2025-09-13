@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "hello-slack-app",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "node src/index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "typescript": "^5.9.2"
+  }
+}
