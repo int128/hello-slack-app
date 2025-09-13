@@ -30,5 +30,4 @@ jobs:
       - run: npm install -g pnpm@latest-10
       - run: pnpm i
       - run: pnpm typecheck
-      - run: pnpm format
-      - run: pnpm lint
+      - run: pnpm check
