@@ -9,7 +9,7 @@ const main = async () => {
 
   app.event('app_mention', async ({ event, say, client }) => {
     app.logger.info(event)
-    await client.reactions.add({
+    client.reactions.add({
       channel: event.channel,
       timestamp: event.ts,
       name: 'robot_face',
