@@ -7,9 +7,19 @@ const main = async () => {
     socketMode: true,
   })
 
-  app.event('app_mention', async ({ event, say }) => {
+  app.event('app_mention', async ({ event, say, client }) => {
     app.logger.info(event)
+    await client.reactions.add({
+      channel: event.channel,
+      timestamp: event.ts,
+      name: 'robot_face',
+    })
     await say(`Hi there, <@${event.user}>!`)
+    await client.reactions.remove({
+      channel: event.channel,
+      timestamp: event.ts,
+      name: 'robot_face',
+    })
   })
 
   await app.start()
